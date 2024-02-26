@@ -271,3 +271,12 @@ server glx vendor string: NVIDIA Corporation
 client glx vendor string: NVIDIA Corporation
 OpenGL vendor string: NVIDIA Corporation
 ```
+
+## Nvidia Optimus
+После того как все драйвера установлены и необходимо выбирать между встроенной графикой/nvidia<br>
+P.s не работает с wayland
+```sh
+yay -S optimus-manager optimus-manger-qt && sudo systemctl enable optimus-manager.service
+```
+[git](https://github.com/Askannz/optimus-manager)
+[wiki](https://wiki.archlinux.org/title/NVIDIA_Optimus_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9))
