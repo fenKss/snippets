@@ -1,3 +1,4 @@
+## Настройка демона
 SSH is a very powerfull tool, for example to pull/changes to remote git repositories w/o having to authorize each time.
 
 1. Ensure you don't have SSH key generated: `cat ~/.ssh/id_rsa.pub`. If this prints something skip to step 4 or 5.
@@ -31,3 +32,12 @@ set -x SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 5. `systemctl --user enable --now ssh-agent`
 6. To add keys use `ssh-add`
 5. `cat ~/.ssh/id_rsa.pub` will print your public SHH key. Copy it and use.
+
+  
+## Русский язык по ssh:
+ ```shell
+sudo nano /etc/ssh/ssh_config
+```
+```
+SendEnv LANG LC_*
+```
