@@ -1,13 +1,5 @@
-Российские зеркала:
-```sh
-cat /etc/pacman.d/mirrorlist
 ```
-```
-Server = https://mirror.yandex.ru/archlinux/$repo/os/$arch
-Server = https://mirror.kpfu.ru/archlinux/$repo/os/$arch
-Server = https://mirror.yal.sl-chat.ru/archlinux/$repo/os/$arch
-Server = https://mirror.truenetwork.ru/archlinux/$repo/os/$arch
-Server = https://mirror.kamtv.ru/archlinux/$repo/os/$arch
+reflector -c ru,fi,se | sudo tee /etc/pacman.d/mirrorlist
 ```
 
 Сформировать новые:
